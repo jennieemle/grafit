@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        body {
+            background-color: #ff9eaa;
+            padding-top: 8rem;
+            display:flex;
+            justify-content: center;
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: lighter;
+        }
+        .card {
+            background-color: #fff;
+            max-width: 360px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 2rem;
+            box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+        }
+        .banner {
+            background-image: url("https://images.unsplash.com/photo-1569101315919-dafea4df33ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVkJTIwZmxvd2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+            display: flex;
+            justify-content: center;
+        }
+        .profile {
+            width : 8rem;
+            height: 8rem;
+            background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/claudia-schiffer-1562251715.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=640:*);
+            background-size: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+            transform: translateY(50%);
+            transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        }
+        .profile:hover{
+            transform: translateY(50%) scale(2.3);
+        }
+        .name {
+            text-align: center;
+            padding-top: 60px;
+            color: rgb(245, 229, 234);
+            text-shadow: rgb(250, 35, 107)1px 2px 1px;
+        }
+        .follow-btn{
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .follow-btn button {
+            font-size: medium;
+            font-weight: bold;
+            background-color: rgb(248, 56, 88);
+            border: none;
+            padding: 1rem;
+            outline: none;
+            border-radius: 50px;
+        }
+        
+        .follow-btn button:hover {
+            background-color: rgb(207, 7, 41);
+            transform: scale(1.1);
+        }
+        .desc{
+            padding: 1.5rem;
+            color: rgb(56, 34, 38);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="banner">
+            <div class="profile"></div>
+        </div>
+        <h2 class="name">claudia schiffer</h2>
+        <div class="follow-btn">
+            <button style="color:rgb(248, 236, 238)">follow</button>
+        </div>
+        <div class="desc">
+            책 구매해주셔서 감사합니다. 노력하는 당신에게 축복을
+            그리고 더나은 여러분이 되시길 기원합니다. 
+        </div>
+    </div>
+</body>
+</html>

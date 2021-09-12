@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newflix</title>
+    <link rel="stylesheet" href="./css/login.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+        @import "./reset.css";
+    
+        
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+	        margin: 0;
+	        padding: 0;
+	        border: 0;
+	        font-size: 100%;
+	        font: inherit;
+	        vertical-align: baseline;
+        }
+        * { box-sizing: border-box;}
+        html, body { overflow: auto; }
+        body{ 
+            font-family: 'Quicksand', sans-serif;
+            background-color: rgb(19, 4, 34);
+            color: #fff
+        }
+        .login-title { text-align: center;}
+        .login-title_maintext {font-size: 2.5rem; color: #a1126a;}
+        .login-title_subtext {font-size: 0.9rem; font-weight: 100;}
+        input { border: none; outline: none; appearance: none;}
+        .login-form { display: flex; flex-direction: column; margin: 1.5rem;}
+        .login-form input { 
+            padding: 15px 0;
+            margin: 0 10px;
+            border: none;
+            outline: none;
+            appearance: none;
+            background-color: rgb(24, 0, 36);
+            font-size: 1em;
+            
+        }
+        .login-form input:not([type="submit"]) {
+            color: rgb(141, 108, 139);
+            border-bottom: 1px solid  ;
+            transition: border-color 0.3s ease-in-out;
+        }
+        .login-form input:focus {
+            border-color: #fff;
+        }
+        .login-form input[type="submit"]{
+            color: rgb(255, 255, 255);
+            background-color: #772270;
+            border-radius: 20px;
+            margin-top: 2rem;
+            transition: background-color 0.2s ease-in-out;
+        }
+        login-form input[type="submit"]:active {
+            background-color: #db3aa5(43, 11, 80);
+        }
+        input {
+            text-align: center;
+            font-family: Helvetica Neue;
+            font-style: normal;
+            font-weight: lighter;
+            color:rgb(235, 226, 235)
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="login-title">
+    <img style="overflow: hidden;" src="https://m.psecn.photoshelter.com/img-get/I0000dO7us4UrUa8/s/600/600/SCHIFFER1926e.jpg" >
+        <h1 class="login-title_maintext">newFitness</h1>
+        <p class="login-title_subtext">
+            새로운 Fitness 등장 <br/>
+            지금 가입하면 무료ㅣ
+        </p>
+        <form action="find.html" class="login-form">
+            <input name="username" type="text" style="font-weight: light;" required autocomplete="off" placeholder="ID"/>
+            <input name="password" type="password" required autocomplete="off" placeholder="PASSWORD"/>
+            <input type="submit" value="Connect"/>
+        </form>
+    </div>
+</body>
+</html>
