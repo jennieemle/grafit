@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newflix2-3</title>
+    <link rel="stylesheet" href="./css/find.css"/>
+    <style>
+        @import "./global.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@import "./reset.css";
+@import "./variable.css";
+@import "./navigation-bar.css";
+@import "./media-query.css";            
+
+    
+        
+html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+	        margin: 0;
+	        padding: 0;
+	        border: 0;
+	        font-size: 100%;
+	        font: inherit;
+	        vertical-align: baseline;
+        }
+        * { box-sizing: border-box;}
+        html, body { overflow: auto; }
+        body{ 
+            font-family: 'Quicksand', sans-serif;
+            background-color: rgb(19, 4, 34);
+            color: #fff
+        }
+
+
+.display-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.position-relative {
+  position: relative;
+}
+
+
+
+.find-search-bar-form {
+    padding: 0 25px;
+}
+
+.find-search-bar-form div {
+    width: 100%
+}
+
+.find-search-bar {
+    margin-top: 20px;
+    background-color: rgb(73, 2, 73);
+    border: 1px solid rgb(73, 2, 73);
+    border-radius: 25px;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+.find-search-bar:focus {
+    background-color: #594374;
+}
+.find-search-bar-form span {
+    position:absolute;
+    font: 1rem;
+    bottom: 0.55rem;
+    right: 25px;
+}
+
+.best-movie__img-container {
+    padding: 0 20px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.best-movie__img {
+    width:22rem;
+    height: 22rem;
+    box-sizing: 25px;
+}
+.best-movie__img-container span {
+    position: absolute;
+    background-color: #830f79;
+    border-radius: 50%;
+    left: calc(50% + 5rem);
+    font-size: 5rem;
+    bottom: 3.2rem;
+}
+.best-movie__title {
+    padding-left: 25px;
+}
+.best-movie__promotion-title {
+    font-size: 14px;
+  }
+.best-movie__movie-name {
+    color: #830f79;
+    font-size: 40px;
+    font-weight: 600;
+  }
+.movie-recommendtion {
+      margin: 25px 0;
+      padding: 0 25px;
+  }
+.movie-recommendtion__images {
+      margin-top: 15px;
+      list-style:none;
+      display: flex;
+      overflow-x: scroll;
+  }
+.movie-recommendtion__images li {
+      margin-left: 5px;
+  }
+.movie-recommendtion__images img {
+      width: 150px;
+      border-radius: 15px;
+  }
+  .navigation-bar {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 8rem;
+    height: 3rem;
+    border-radius: 0 10px 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+  }
+  .navigation-bar span {
+    color: black;
+    font-size: 2rem;
+  }
+  .find-icon-clicked {
+    font-weight: 600;
+  }
+    </style>
+</head>
+<body>
+    <form class="find-search-bar-form display-flex-center position-relative">
+        <div class="display-flex-center position-relative">
+            <input class="find-search-bar" placeholder="search"/>
+            <span class="material-icons-outlined">search</span>
+        </div>
+    </form>
+
+    <div class="best-movie position-relative">
+        <div class="best-movie__img-container">
+            <img class="best-movie__img" src="https://i.redd.it/qyfxckfpdjm11.jpg"/>
+            <span class="material-icons"> play_arrow</span>
+        </div>
+        <div class="best-movie__title">
+            <p class="best-movie__promotion-text">What's Hot!</p>
+            <span class="best-movie__movie-name">Perfectly Fit Workout</span>
+        </div>
+    </div>
+
+    <div class="movie-recommendtion">
+        <span class="movie-recommendtion__title">What's Next></span>
+        <ul class="movie-recommendtion__images">
+            <li>
+                <img src="https://i.ytimg.com/vi/RbTvAaFwbq4/hqdefault.jpg"/>
+            </li>
+            <li>
+                <img src="https://i.ytimg.com/vi/XpZz6gT9G2w/hqdefault.jpg"/>
+            </li>
+            <li>
+                <img src="https://i.pinimg.com/originals/74/a8/6a/74a86a7f3112e4d3cb59be9eed52e441.jpg"/>
+            </li>
+        </ul>
+    </div>
+    <div class="navigation-bar">
+        <a href="newflix.html">
+         <span class="material-icons-outlined find-icon-clicked"> search </span>
+        </a>
+        <a href="newflix3-2.html">
+         <span class="material-icons-outlined"> person_outline </span>
+        </a>
+     </div>
+</body>
+</html>
