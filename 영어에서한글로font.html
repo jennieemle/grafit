@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영어에서한글로font</title>
+     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<style>
+  * {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+</style>
+</head>
+<body>
+   <h2 style="color: lightgrey;">단어장</h2>
+  <p>
+  영어 <input id="item" type="text" size="34"><br>
+  한글 <input id="count" type="text" size="34"><br>
+  <button type="button" id="save" onclick="store()" style="color: hotpink;">저장</button>
+  <button type="button" id="retrieve" onclick="retrieve()">단어검색</button>
+  <button type="button" id="" onclick="removeItem()">삭제</button>  
+  <button type="button" id="" onclick="key()">전체보기</button><p><br>
+ 
+   <script>
+    let item = document.getElementById("item");
+    let count = document.getElementById("count");
+
+    function store() {
+      if (!window.localStorage) {
+        alert("로컬스토리지를 지원하지 않습니다.");
+        return;
+      }
+      localStorage.setItem(item.value, count.value);
+    }
+    
+    function retrieve() {
+      if (!window.localStorage) {
+        alert("로컬스토리지를 지원하지 않습니다.");
+        return;
+      }
+      let val = localStorage.getItem(item.value);
+      if(val == null)
+        alert(item.value + "는 저장함에 없습니다.");
+      else 
+        count.value = val; 
+    }
+
+    function removeItem() {
+      if(!window.localStorage) {
+        alert("로컬스토리지를 지원하지 않습니다.");
+        return;
+      }
+      localStorage.removeItem(item.value);
+       alert(item.value + "를 삭제하십니다.");
+    }
+
+    function key() {
+      if(!window.localStorage) {
+        alert("로컬스토리지를 지원하지 않습니다.");
+        return;
+      }
+        localStorage.key(item.value); {
+          for(var i=0; i<localStorage. length; i++) { 
+          var key = localStorage.key(i); 
+          var val = localStorage.getItem(key); 
+          document.write(key + " " + val + "<br>");}
+        }
+      }
+        
+  
+  </script>
+
+ <script>
+  function {
+            alert('for(var i=0; i<localStorage. length; i++) { var key = localStorage.key(i); var val = localStorage.getItem(key); document.write(key + " " + val + "<br>"); }')
+          }
+
+        function order(){
+            alert('myRoom\n' +
+                'myFit\n' +
+                'now\n' +
+                'search\n' +
+                'event\n' +
+                'before*after\n' +
+                'certificate\n' +
+                'contact');
+        }
+    </script>
+ 
+</body>
+</html>
+
+
+
+
